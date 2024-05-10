@@ -9,13 +9,13 @@
 8- Agregar al constructor esta_volando=True
 9- Agregar métodos vuela y aterriza(esta_volando)
 10- Crear un automovilvolador y muestre por consola comportamiento y características
-11 - Agregar dos métodos abstractos en clases correspondientes volar() y conducir()
+11- Agregar dos métodos abstractos en clases correspondientes volar() y conducir()
 """
 
 from Automovil import Automovil
 from AutomovilVolador import AutomovilVolador
 
-# Crear un coche y mostrar en consola las ruedas y la aceleración
+# Crear un automóvil
 coche1 = Automovil("Rojo", "Toyota", 10, 0)
 print(f"El coche 1 tiene {coche1.ruedas} ruedas y una aceleración de {coche1.aceleracion}")
 
@@ -36,10 +36,18 @@ coche2.frenar(5)
 # Mostrar la velocidad después de frenar
 print("Velocidad actual del segundo coche después de frenar:", coche2.velocidad)
 
+# Crear un automóvil volador
 automovil_volador1 = AutomovilVolador("Azul", "Honda", 8, 0)
 
 print(f"El automóvil volador es de color {automovil_volador1.color}, marca {automovil_volador1.marca}, con {automovil_volador1.ruedas} ruedas, y tiene una aceleración de {automovil_volador1.aceleracion}. Está volando: {automovil_volador1.esta_volando}")
 
-automovil_volador1.aterriza()
+automovil_volador1.volar()
+print(f"El automóvil volador es de color {automovil_volador1.color}, marca {automovil_volador1.marca}, con {automovil_volador1.ruedas} ruedas, y tiene una aceleración de {automovil_volador1.aceleracion}. Está volando: {automovil_volador1.esta_volando}")
+
+automovil_volador1.aterrizar()
 
 print(f"El automóvil volador es de color {automovil_volador1.color}, marca {automovil_volador1.marca}, con {automovil_volador1.ruedas} ruedas, y tiene una aceleración de {automovil_volador1.aceleracion}. Está volando: {automovil_volador1.esta_volando}")
+
+# Intentar hacer volar un automóvil regular
+coche1.volar()
+

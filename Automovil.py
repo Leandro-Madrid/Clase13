@@ -1,24 +1,21 @@
-"""
-Crear una clase Automovil
-"""
+from Vehiculo import Vehiculo
 
-class Automovil:
+class Automovil(Vehiculo):
     def __init__(self, color, marca, aceleracion, velocidad):
-        self.color = color
-        self.marca = marca
-        self.aceleracion = aceleracion
-        self.velocidad = velocidad
+        """
+        Constructor de la clase Automovil.
+        """
+        super().__init__(color, marca, aceleracion, velocidad)
         self.ruedas = 4
 
-    def mostrar_ruedas_y_aceleracion(self):
-        print("Número de ruedas:", self.ruedas)
-        print("Aceleración:", self.aceleracion)
+    def conducir(self):
+        """
+        Método que simula la acción de conducir un automóvil.
+        """
+        print("El automóvil está siendo conducido.")
 
-    def acelerar(self):
-        self.velocidad += self.aceleracion
-
-    def frenar(self, reduccion):
-        self.velocidad -= reduccion
-        if self.velocidad < 0:
-            self.velocidad = 0
-
+    def volar(self):
+        """
+        Implementación del método abstracto volar para la clase Automovil.
+        """
+        print("¡Los automóviles no pueden volar!")

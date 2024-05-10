@@ -1,21 +1,17 @@
 from Vehiculo import Vehiculo
 
+# Clase Automovil.
 class Automovil(Vehiculo):
+
+    # Constructor de la clase Automovil.
     def __init__(self, color, marca, aceleracion, velocidad):
-        """
-        Constructor de la clase Automovil.
-        """
         super().__init__(color, marca, aceleracion, velocidad)
         self.ruedas = 4
 
+    # Método que simula la acción de conducir un automóvil.
     def conducir(self):
-        """
-        Método que simula la acción de conducir un automóvil.
-        """
         print("El automóvil está siendo conducido.")
 
+    # Implementación del método abstracto volar para la clase Automovil.
     def volar(self):
-        """
-        Implementación del método abstracto volar para la clase Automovil.
-        """
         print("¡Los automóviles no pueden volar!")

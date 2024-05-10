@@ -1,31 +1,25 @@
 from Vehiculo import Vehiculo
 
+# Clase AutomovilVolador.
 class AutomovilVolador(Vehiculo):
+    
+    # Constructor de la clase AutomovilVolador.
     def __init__(self, color, marca, aceleracion, velocidad, esta_volando=False):
-        """
-        Constructor de la clase AutomovilVolador.
-        """
         super().__init__(color, marca, aceleracion, velocidad)
         self.ruedas = 6
         self.esta_volando = esta_volando
 
+    # Método que simula la acción de volar un automóvil volador.
     def volar(self):
-        """
-        Método que simula la acción de volar un automóvil volador.
-        """
         self.esta_volando = True
         print("El automóvil volador está volando.")
 
+    #Método que simula la acción de aterrizar un automóvil volador.
     def aterrizar(self):
-        """
-        Método que simula la acción de aterrizar un automóvil volador.
-        """
         self.esta_volando = False
         print("El automóvil volador aterrizó.")
 
+    # Método que simula la acción de conducir un automóvil volador.
     def conducir(self):
-        """
-        Método que simula la acción de conducir un automóvil volador.
-        """
         print("El automóvil volador está siendo conducido.")
 

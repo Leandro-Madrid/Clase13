@@ -36,7 +36,7 @@ coche2.frenar(5)
 # Mostrar la velocidad después de frenar
 print("Velocidad actual del segundo coche después de frenar:", coche2.velocidad)
 
-# Crear un automóvil volador
+# Crear un automóvil volador. Usar volar y aterrizar
 automovil_volador1 = AutomovilVolador("Azul", "Honda", 8, 0)
 
 print(f"El automóvil volador es de color {automovil_volador1.color}, marca {automovil_volador1.marca}, con {automovil_volador1.ruedas} ruedas, y tiene una aceleración de {automovil_volador1.aceleracion}. Está volando: {automovil_volador1.esta_volando}")

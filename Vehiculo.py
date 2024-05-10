@@ -1,45 +1,31 @@
 from abc import ABC, abstractmethod
 
+# Clase abstracta Vehiculo.
 class Vehiculo(ABC):
-    """
-    Clase abstracta que define un vehículo.
-    """
+    
+    # Constructor de la clase Vehiculo.
     def __init__(self, color, marca, aceleracion, velocidad):
-        """
-        Constructor de la clase Vehiculo.
-        """
         self.color = color
         self.marca = marca
         self.aceleracion = aceleracion
         self.velocidad = velocidad
 
+    # Método abstracto que simula la acción de conducir un Vehiculo.
     @abstractmethod
     def conducir(self):
-        """
-        Método abstracto que simula la acción de conducir un vehículo.
-        """
         pass
     
+    # Método abstracto que simula la acción de volar un Vehiculo.
     @abstractmethod
     def volar(self):
-        """
-        Método abstracto que simula la acción de volar un vehículo.
-        """
         pass
 
+    # Aumenta la velocidad del Vehiculo en función de la aceleración.
     def acelerar(self):
-        """
-        Aumenta la velocidad del vehículo en función de la aceleración.
-        """
         self.velocidad += self.aceleracion
 
+    # Reduce la velocidad del Vehiculo en función de una cantidad de reducción.
     def frenar(self, reduccion):
-        """
-        Reduce la velocidad del vehículo en función de una cantidad de reducción.
-
-        Args:
-            reduccion (int): Cantidad en la que se reduce la velocidad.
-        """
         self.velocidad -= reduccion
         if self.velocidad < 0:
             self.velocidad = 0

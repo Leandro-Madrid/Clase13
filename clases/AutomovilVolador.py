@@ -1,11 +1,11 @@
-from Vehiculo import Vehiculo
+from clases.Vehiculo import Vehiculo
 
 # Clase AutomovilVolador.
 class AutomovilVolador(Vehiculo):
     
     # Constructor de la clase AutomovilVolador.
-    def __init__(self, color, marca, aceleracion, velocidad, esta_volando=False):
-        super().__init__(color, marca, aceleracion, velocidad)
+    def __init__(self, color, marca, aceleracion, velocidad, anio, modelo, esta_volando=False):
+        super().__init__(color, marca, aceleracion, velocidad, anio, modelo)
         self.ruedas = 6
         self.esta_volando = esta_volando
 

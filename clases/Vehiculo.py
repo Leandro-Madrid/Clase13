@@ -4,11 +4,26 @@ from abc import ABC, abstractmethod
 class Vehiculo(ABC):
     
     # Constructor de la clase Vehiculo.
-    def __init__(self, color, marca, aceleracion, velocidad):
+    def __init__(self, color, marca, aceleracion, velocidad, anio, modelo):
         self.color = color
         self.marca = marca
         self.aceleracion = aceleracion
         self.velocidad = velocidad
+        self._anio = anio
+        self.__modelo = modelo
+    
+
+    def get_anio (self):
+        return self._anio
+
+    def get_modelo (self):
+        return self.__modelo
+    
+    def set_anio (self, anio):
+        self._anio = anio
+
+    def set_modelo(self, nuevo_modelo):
+        self.__modelo = nuevo_modelo
 
     # Método abstracto que simula la acción de conducir un Vehiculo.
     @abstractmethod
@@ -30,5 +45,13 @@ class Vehiculo(ABC):
         if self.velocidad < 0:
             self.velocidad = 0
 
+    # Imprimir info
+    def info(self):
+        print(self.color)
+        print(self.marca)
+        print(self.aceleracion)
+        print(self.velocidad)
+        print(self._anio)
+        print(self.__modelo)
 
 
